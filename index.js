@@ -21,7 +21,7 @@ app.use('/api/workouts' , workOutRoutes)
 
 // Connect to db
 mongoose.connect(process.env.MONG_URI)
-    .then(() => {
+    .then(() => {   
         //list for Request
     app.listen(PORT, () => {
         console.log(`Connected to database & Listening at Port ${PORT} ! `);
@@ -32,3 +32,5 @@ mongoose.connect(process.env.MONG_URI)
     })
 
 const PORT = process.env.PORT || 4000;  
+
+module.exports = app
